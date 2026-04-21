@@ -1,8 +1,18 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "gluino",
   "version-semver": "1.0.0",
   "description": "A cutting-edge header-only utility library for C++ which extends the STL useful missing functionality.",
-  "homepage": "https://www.gitlab.com/colorglass/gluino",
-  "license": "Apache-2.0"
+  "homepage": "https://github.com/Zentarious/CommonLibSSE-NG-Zen-Repository/tree/main/ports/gluino",
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
 }
