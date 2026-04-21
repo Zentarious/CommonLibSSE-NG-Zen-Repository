@@ -1,7 +1,7 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO Zentarious/CommonLibSSE-NG-Zen-Repository
-    REF <new-commit-id-or-tag>
+    REF  main
     SHA512 0
 )
 
