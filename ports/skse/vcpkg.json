@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "skse",
+  "version-string": "2.2.3",
+  "description": "Papyrus script sources for the Skyrim Script Extender (SKSE).",
+  "homepage": "https://skse.silverlock.org/",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+  "default-features": [
+    "plugin",
+    "scripts"
+  ],
+  "features": {
+    "internal-xbyak": {
+      "description": "Installs SKSE's internal xbyak library (v4.7.8) (optional)"
+    },
+    "plugin": {
+      "description": "Builds the SKSE64 DLL module.",
+      "dependencies": [
+        "script-extender-common"
+      ]
+    },
+    "scripts": {
+      "description": "Install the SKSE Papyrus script sources."
+    }
+  }
+}
