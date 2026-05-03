@@ -8,7 +8,7 @@ vcpkg_from_github(
 
 vcpkg_configure_cmake(
         SOURCE_PATH "${SOURCE_PATH}"
-        OPTIONS -DENABLE_SKYRIM_VR=off -DENABLE_SKYRIM_SE=off -DBUILD_TESTS=off -DSKSE_SUPPORT_XBYAK=on
+        OPTIONS -DBUILD_TESTS=off -DSKSE_SUPPORT_XBYAK=on
 )
 
 vcpkg_install_cmake()
@@ -22,7 +22,6 @@ file(INSTALL "${SOURCE_PATH}/cmake/CommonLibSSE.cmake" DESTINATION "${CURRENT_PA
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/share/CommonLibSSE/CommonLibSSE")
 
-file(
-        INSTALL "${SOURCE_PATH}/LICENSE"
+file(INSTALL "${SOURCE_PATH}/LICENSE"
         DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}"
         RENAME copyright)
